@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Денис Феклин — AI Infrastructure Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0b;
+            --surface: #141416;
+            --border: #262629;
+            --text-main: #ffffff;
+            --text-dim: #94949e;
+            --accent: #3b82f6; /* Modern Blue */
+            --accent-soft: rgba(59, 130, 246, 0.1);
+            --mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        /* --- Header Section --- */
+        header {
+            margin-bottom: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2.5rem;
+        }
+
+        .hero-info h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-info p.role {
+            font-family: var(--mono);
+            color: var(--accent);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .contacts {
+            text-align: right;
+            font-family: var(--mono);
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        .contacts a {
+            color: var(--text-main);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.25rem;
+            transition: color 0.2s;
+        }
+
+        .contacts a:hover { color: var(--accent); }
+
+        /* --- Grid Layout --- */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 4rem;
+        }
+
+        aside h2 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        aside h2::after {
+            content: '';
+            height: 1px;
+            flex-grow: 1;
+            background: var(--border);
+        }
+
+        .skill-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .skill-group h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+            color: var(--text-dim);
+        }
+
+        .tag.highlight {
+            border-color: var(--accent);
+            color: var(--text-main);
+        }
+
+        /* --- Main Content --- */
+        .main-content section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .experience-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .exp-header .date {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .exp-company {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        ul.exp-details {
+            list-style: none;
+        }
+
+        ul.exp-details li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        ul.exp-details li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--border);
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .project-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            font-size: 0.65rem;
+            background: var(--accent-soft);
+            color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        @media (max-width: 850px) {
+            header { flex-direction: column; align-items: flex-start; gap: 2rem; }
+            .contacts { text-align: left; }
+            .layout-grid { grid-template-columns: 1fr; }
+            .hero-info h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="hero-info">
+            <p class="role">AI Infrastructure Engineer</p>
+            <h1>Денис Феклин</h1>
+        </div>
+        <div class="contacts">
+            <a href="tel:+79139965657">+7 (913) 996-56-57</a>
+            <a href="mailto:frmthlft@gmail.com">frmthlft@gmail.com</a>
+            <a href="https://t.me/rls1122" target="_blank">Telegram: @rls1122</a>
+            <span>Perm, Russia / Remote</span>
+        </div>
+    </header>
+
+    <div class="layout-grid">
+        <aside>
+            <section>
+                <h2>Stack</h2>
+                <div class="skill-group">
+                    <h3>AI & LLM</h3>
+                    <div class="skill-tags">
+                        <span class="tag highlight">Ollama</span>
+                        <span class="tag highlight">Hugging Face</span>
+                        <span class="tag">vLLM</span>
+                        <span class="tag">OpenAI API</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">RAG</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="tag highlight">Terraform</span>
+                        <span class="tag highlight">Ansible</span>
+                        <span class="tag">Yandex Cloud</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Cloudflare</span>
+                        <span class="tag">Airtable</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Linux & Net</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Debian/Ubuntu</span>
+                        <span class="tag">OpenWrt</span>
+                        <span class="tag">MikroTik (MTCNA)</span>
+                        <span class="tag">TCP/IP</span>
+                        <span class="tag">VLAN/NAT</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Bash</span>
+                        <span class="tag">C</span>
+                        <span class="tag">English (B1)</span>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <section id="about">
+                <div class="section-header">Summary</div>
+                <p style="color: var(--text-dim);">Инженер новой формации на стыке системного администрирования и AI-технологий. Использую концепцию <strong>Vibe Coding</strong>: делегирую написание кода AI-агентам, фокусируясь на архитектуре, постановке высокоуровневых задач и верификации результата. Глубокий бэкграунд в Linux и сетях позволяет мне эффективно управлять AI-стеком, превращая сложные инфраструктурные вызовы в быстрореализуемые решения. Мой подход — максимальная скорость доставки (Time-to-Market) при сохранении системной надежности.</p>
+            </section>
+
+            <section id="projects">
+                <div class="section-header">Featured Projects</div>
+                
+                <div class="project-card">
+                    <h4>VyOS-Copilot <span class="badge">Network AI Orchestrator</span></h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem;">Интеллектуальный ассистент для управления сетевой инфраструктурой VyOS на естественном языке.</p>
+                    <ul class="exp-details">
+                        <li>Разработал RAG-систему (Python, <strong>ChromaDB</strong>), индексирующую документацию VyOS для генерации безошибочных CLI-команд.</li>
+                        <li>Реализовал мульти-провайдерную поддержку LLM: интеграция с <strong>Gemini, OpenAI, Anthropic</strong> и локальными моделями через <strong>Ollama</strong>.</li>
+                        <li>Внедрил безопасный воркфлоу "Plan/Apply" через <strong>Netmiko</strong>, позволяющий верифицировать изменения перед их применением на сетевых устройствах.</li>
+                        <li>Автоматизировал сбор и семантическую обработку техдокументации, обеспечив высокую точность команд в изолированных (air-gapped) средах.</li>
+                    </ul>
+                    <a href="https://github.com/Gotofffromthebus/vyos-copilot" target="_blank" style="font-family: var(--mono); font-size: 0.75rem; color: var(--accent); text-decoration: none; margin-top: 1rem; display: inline-block;">View on GitHub →</a>
+                </div>
+
+                <div class="project-card">
+                    <h4>Hermes <span class="badge">AI Agent / RAG System</span></h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem;">Автономный агент-аналитик для обработки финансовых данных и Web-автоматизации.</p>
+                    <ul class="exp-details">
+                        <li>Реализовал систему семантического поиска на базе ChromaDB для глубокого анализа финансовых отчетов.</li>
+                        <li>Построил многозадачного агента (Python), выполняющего циклы сбор данных → векторизация → анализ → Telegram-алерт.</li>
+                        <li>Оптимизировал инференс локальных моделей через Ollama для работы в условиях ограниченных ресурсов VPS.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="experience">
+                <div class="section-header">Experience</div>
+                
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>AI Infrastructure & Automation</h3>
+                        <span class="date">2024 — Present</span>
+                    </div>
+                    <div class="exp-company">Self-employed / Project based</div>
+                    <ul class="exp-details">
+                        <li>Развертывание локальных LLM (Ollama, Hugging Face) и интеграция облачных API в производственные воркфлоу.</li>
+                        <li>Описание облачной инфраструктуры через Terraform (IaC) и управление состоянием серверов через Ansible (Yandex Cloud, Cloudzy).</li>
+                        <li>Администрирование и тюнинг Linux-серверов для высоконагруженных AI-задач.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>DevOps Trainee</h3>
+                        <span class="date">08.2024 — 10.2024</span>
+                    </div>
+                    <div class="exp-company">ПАО МОРИОН</div>
+                    <ul class="exp-details">
+                        <li>Построение CI/CD пайплайнов (Build → Test → Flash) для телеком-оборудования (CPE) на базе GitLab CI.</li>
+                        <li>Автоматизация тестирования прошивок через Python и Docker с использованием UART-интерфейсов.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Student / System Programming</h3>
+                        <span class="date">2022 — 2024</span>
+                    </div>
+                    <div class="exp-company">Школа 21 (Сбер)</div>
+                    <ul class="exp-details">
+                        <li>Глубокое изучение архитектуры Unix-систем и низкоуровневой разработки на C.</li>
+                        <li>Разработка собственных утилит Bash и системных инструментов.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Linux Tester</h3>
+                        <span class="date">2022</span>
+                    </div>
+                    <div class="exp-company">ПАО МОРИОН</div>
+                    <ul class="exp-details">
+                        <li>Сборка и верификация кастомных дистрибутивов OpenWrt на платформах MediaTek и Rockchip.</li>
+                        <li>Диагностика сетевых протоколов (DHCP, NTP) и нагрузочное тестирование устройств.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+    gsap.from('.hero-info h1', { y: 40, opacity: 0, duration: 1, ease: 'power4.out' });
+    gsap.from('.role', { y: 20, opacity: 0, duration: 1, delay: 0.3, ease: 'power3.out' });
+    gsap.from('.layout-grid', { opacity: 0, y: 30, duration: 1, delay: 0.6 });
+</script>
+</body>
+</html>
