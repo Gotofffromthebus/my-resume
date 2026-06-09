@@ -1,7 +1,0 @@
-.wrangler
-node_modules
-.DS_Store
-wrangler.log
-functions/
-worker.js
-wrangler.toml
