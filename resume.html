@@ -288,7 +288,6 @@
                         <span class="tag">Python</span>
                         <span class="tag">Bash</span>
                         <span class="tag">C</span>
-                        <span class="tag">English (B1)</span>
                     </div>
                 </div>
             </section>
@@ -297,11 +296,8 @@
         <main class="main-content">
             <section id="about">
                 <div class="section-header">Summary</div>
-                <p style="color: var(--text-dim); margin-bottom: 1rem;">
-                    Инженер новой формации, специализирующийся на <strong>AI-Augmented Engineering</strong>. Использую глубокий бэкграунд в Linux и сетях для создания высокопроизводительной AI-инфраструктуры. Мой подход — оркестрация AI-агентов для автоматизации сложных циклов разработки, что позволяет сокращать Time-to-Market в несколько раз без потери системной надежности.
-                </p>
-                <p style="color: var(--text-dim); font-size: 0.9rem; border-left: 2px solid var(--border); padding-left: 1rem; font-style: italic;">
-                    AI Infrastructure Engineer with a strong background in Linux & Networking. Expert in AI-augmented engineering, leveraging LLM orchestration to accelerate development cycles and build robust RAG systems. Focused on high-velocity delivery and infrastructure reliability.
+                <p style="color: var(--text-dim);">
+                    Инженер, специализирующийся на системном администрировании и внедрении AI-инструментов в инфраструктуру. Использую бэкграунд в Linux и сетях для создания автоматизированных решений и AI-агентов. Фокусируюсь на ускорении рабочих процессов через интеграцию LLM, разработку RAG-систем и автоматизацию рутинных задач.
                 </p>
             </section>
 
@@ -309,23 +305,23 @@
                 <div class="section-header">Featured Projects</div>
                 
                 <div class="project-card">
-                    <h4>VyOS-Copilot <span class="badge">Network AI Orchestrator</span></h4>
-                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem;">Интеллектуальный ассистент для управления сетевой инфраструктурой VyOS на естественном языке.</p>
+                    <h4>VyOS-Copilot <span class="badge">Network AI Assistant</span></h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem;">Интерактивный помощник для управления сетевой операционной системой VyOS на естественном языке.</p>
                     <ul class="exp-details">
-                        <li>Реализовал RAG-систему (Python, <strong>ChromaDB</strong>), индексирующую 500+ страниц документации VyOS, что обеспечило <strong>точность генерации команд >95%</strong>.</li>
-                        <li>Внедрил воркфлоу "Plan/Apply" через Netmiko, <strong>сократив время конфигурации сложных сегментов сети на 70%</strong>.</li>
-                        <li>Интегрировал поддержку Gemini, OpenAI и Ollama, обеспечив работу системы как в облаке, так и в <strong>air-gapped средах</strong>.</li>
+                        <li>Реализовал RAG-систему на базе <strong>ChromaDB</strong>, использующую официальную документацию VyOS для генерации CLI-команд.</li>
+                        <li>Настроил работу с моделями через <strong>Ollama</strong> и API (Gemini/OpenAI), реализовав механизм подтверждения изменений "Plan/Apply".</li>
+                        <li>Использовал библиотеку <strong>Netmiko</strong> для программного взаимодействия с сетевым оборудованием.</li>
                     </ul>
                     <a href="https://github.com/Gotofffromthebus/vyos-copilot" target="_blank" style="font-family: var(--mono); font-size: 0.75rem; color: var(--accent); text-decoration: none; margin-top: 1rem; display: inline-block;">View on GitHub →</a>
                 </div>
 
                 <div class="project-card">
-                    <h4>Hermes <span class="badge">AI Agent / RAG System</span></h4>
-                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem;">Автономный агент-аналитик для обработки финансовых данных и автоматизации бизнес-процессов.</p>
+                    <h4>Hermes <span class="badge">AI Agent</span></h4>
+                    <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem;">Автономный агент для сбора данных и автоматизации уведомлений.</p>
                     <ul class="exp-details">
-                        <li>Автоматизировал сбор и семантический анализ данных из 10+ источников, сократив время подготовки ежедневных отчетов <strong>с 3 часов до 12 минут</strong>.</li>
-                        <li>Разработал Full-stack пайплайн: Landing (Cloudflare) → Automation (Airtable API) → Notification (Telegram), обеспечив <strong>моментальную обработку лидов</strong>.</li>
-                        <li>Оптимизировал локальный инференс (Ollama), добившись стабильной работы LLM на бюджетных VPS с 8GB RAM.</li>
+                        <li>Разработал скрипты для автоматического сбора данных из внешних источников и их анализа через LLM.</li>
+                        <li>Настроил уведомления в Telegram по расписанию (Cron) и интеграцию с Airtable для хранения заявок.</li>
+                        <li>Реализовал Full-stack цепочку: лендинг на Cloudflare → обработка данных → отправка в Telegram-канал.</li>
                     </ul>
                 </div>
             </section>
@@ -336,38 +332,37 @@
                 <div class="experience-item">
                     <div class="exp-header">
                         <h3>AI Infrastructure & Automation</h3>
-                        <span class="date">Oct 2024 — Present</span>
+                        <span class="date">Окт 2024 — н.в.</span>
                     </div>
-                    <div class="exp-company">Self-employed / AI Solutions</div>
+                    <div class="exp-company">Самозанятый</div>
                     <ul class="exp-details">
-                        <li>Проектирование и развертывание масштабируемых RAG-систем на базе ChromaDB и LangChain.</li>
-                        <li>Автоматизация управления облачной инфраструктурой (Yandex Cloud, Cloudzy) с использованием <strong>Terraform и Ansible</strong>.</li>
-                        <li>Тюнинг Linux-окружений для инференса локальных моделей (vLLM, Ollama) с мониторингом утилизации GPU/RAM.</li>
+                        <li>Развертывание локальных моделей (Ollama) и настройка окружения для работы AI-агентов.</li>
+                        <li>Автоматизация управления VPS через <strong>Ansible и Terraform</strong> (Yandex Cloud, Cloudzy).</li>
+                        <li>Администрирование Linux-серверов и настройка мониторинга системных ресурсов.</li>
                     </ul>
                 </div>
 
                 <div class="experience-item">
                     <div class="exp-header">
                         <h3>DevOps Trainee</h3>
-                        <span class="date">Aug 2024 — Oct 2024</span>
+                        <span class="date">Авг 2024 — Окт 2024</span>
                     </div>
                     <div class="exp-company">ПАО МОРИОН</div>
                     <ul class="exp-details">
-                        <li>Разработка и поддержка CI/CD пайплайнов в GitLab CI для встраиваемого ПО (CPE-устройства).</li>
-                        <li>Автоматизация прошивки и первичного тестирования через Python/UART, ускорившая цикл верификации на 40%.</li>
+                        <li>Участие в поддержке CI/CD пайплайнов в GitLab CI для CPE-устройств.</li>
+                        <li>Автоматизация процессов прошивки оборудования с использованием Python и UART.</li>
                     </ul>
                 </div>
 
                 <div class="experience-item">
                     <div class="exp-header">
                         <h3>Linux Tester / Network Engineer</h3>
-                        <span class="date">Mar 2022 — Nov 2022</span>
+                        <span class="date">Март 2022 — Ноя 2022</span>
                     </div>
                     <div class="exp-company">ПАО МОРИОН</div>
                     <ul class="exp-details">
-                        <li>Верификация кастомных сборок OpenWrt для платформ MediaTek MT7621 и Rockchip RK3568.</li>
-                        <li>Настройка тестовых стендов (EVE-ng, QEMU) для эмуляции сложных топологий сети.</li>
-                        <li>Диагностика L2/L3 протоколов и формирование детальных баг-репортов для команды разработки.</li>
+                        <li>Тестирование сборок OpenWrt для платформ MediaTek и Rockchip.</li>
+                        <li>Настройка тестовых окружений (EVE-ng, GNS3) и диагностика сетевых протоколов.</li>
                     </ul>
                 </div>
             </section>
@@ -376,19 +371,19 @@
                 <div class="section-header">Education & Certs</div>
                 <div class="experience-item">
                     <div class="exp-header">
-                        <h3>System Programming & Unix Architecture</h3>
-                        <span class="date">Nov 2022 — Aug 2024</span>
+                        <h3>Системное программирование</h3>
+                        <span class="date">Ноя 2022 — Авг 2024</span>
                     </div>
                     <div class="exp-company">Школа 21 (Сбер)</div>
-                    <p style="font-size: 0.9rem; color: var(--text-dim);">Интенсивное обучение (Peer-to-peer) системному программированию на C, разработке шеллов и сетевых протоколов.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Обучение программированию на C, работе с Unix-системами и сетевыми технологиями.</p>
                 </div>
                 <div class="experience-item">
                     <div class="exp-header">
-                        <h3>Certifications</h3>
+                        <h3>Сертификаты</h3>
                     </div>
                     <ul class="exp-details">
                         <li><strong>MikroTik Certified Network Associate (MTCNA)</strong>, 2023</li>
-                        <li><strong>Linux OS Administration. Professional</strong> (OTUS), 2024</li>
+                        <li><strong>Администрирование ОС Linux. Professional</strong> (OTUS), 2024</li>
                     </ul>
                 </div>
             </section>
